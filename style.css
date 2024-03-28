@@ -1,0 +1,117 @@
+.battery-top{
+    width: 30px;
+    height: 10px;
+    background:rgb black;
+    margin: 0 auto;
+    border: 3px solid silver;
+    border-top-right-radius: 8px;
+    border-top-left-radius:8px ;
+}
+body{
+    background: black;
+}
+.main{
+    margin-top: 100px;
+}
+.battery-content{
+    width: 160px;
+    height: 250px;
+    background: rgb black;
+    position: relative;
+    margin: 0 auto;
+    border: 3px solid silver;
+    border-radius: 18px;
+
+
+
+}
+.charge{
+    width: 160px;
+    position: absolute;
+    bottom: 0; 
+    border-radius: 14px;
+    animation: battery 8s linear infinite;
+}
+@keyframes battery{
+    0%{
+        height: 0%;
+        background: red;
+    }
+    25%{
+        height: 25%;
+        background: orange;
+    }
+    50%{
+        height: 50%;
+        background: yellow;
+    }
+    75%{
+        height: 75%;
+        background: yellow;
+    }   100%{
+        height: 100%;
+        background: rgb(0,255,0);
+    }
+
+}
+
+/* batrea */
+body{
+    background: black;
+}
+.loader{
+    position: relative;
+    margin: auto;
+    width: 350px;
+    height: 350px;
+}
+.loader div{
+    background-color: red;
+    position: absolute;
+    margin: auto;
+    width: 125px;
+    height: 200px;
+}
+.loader div:nth-child(1){
+    left: 40px;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: rotate(45deg);
+    transform-origin: 50% 69%;
+    border-radius: 100px 100px 10px 10px;
+    animation: 4s linear infinite;
+    animation-name:myanim1 ;
+}
+.loader div:nth-child(2){
+    left: 132px;
+    top: 151px;
+    transform: rotate(135deg);
+    transform-origin: 50% 31%;
+    border-radius: 100px 100px 10px 10px;
+    border-radius: 10px 10px 100px 100px;
+    animation: 4s 1s linear infinite;
+    animation-name:myanima2 ;
+}
+@keyframes myanim1{
+    25%{
+        transform: rotate(45deg) rotateX(180deg);
+    }
+    50%{
+        transform: rotate(45deg) rotateX(180deg);
+    }
+    75%{
+        transform: rotate(45deg);
+    }
+}
+@keyframes myanima2{
+    25%{
+        transform: rotate(135deg) rotateX(180deg);
+    }
+    50%{
+        transform: rotate(135deg) rotateX(180deg);
+    }
+    75%{
+        transform: rotate(135deg);
+    }
+}
